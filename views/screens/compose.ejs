@@ -1,0 +1,22 @@
+<%- include('../layouts/header') %> 
+
+<form action="/compose" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="blogTitle" placeholder="enter title for your blog">
+      
+    </div>
+    <div class="mb-3">
+        <label for="subTitle" class="form-label">Sub Title</label>
+        <input type="text" class="form-control" id="subTitle" name="blogSubTitle" placeholder="enter sub-title for your blog">
+        
+      </div>
+      <div class="mb-3">
+        <label for="text" class="form-label">article</label>
+        <input type="text" class="form-control" id="text" name="blogText" placeholder="enter your text">
+        
+      </div>
+    <button type="submit" class="btn btn-primary"> Submit</button>
+  </form>
+
+<%- include('../layouts/footer') %>
