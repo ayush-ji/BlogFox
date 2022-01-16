@@ -1,0 +1,36 @@
+body, html {
+    overflow-x: hidden;
+    background-color: rgb(232, 248, 248);
+}
+
+#navbar > div {
+    font-size: 1.4em;
+    color: rgb(211, 206, 206)  !important ;
+}
+
+#new-blog-holder {
+    padding: 39px;
+    background-color:blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#new-blog-holder > div {
+    flex-grow: 1;
+    max-width: 550px;
+}
+
+.fav-item {
+    height: 25%;
+}
+
+#fav-cont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#fav-cont > div {
+    display: flex;
+}
