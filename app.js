@@ -9,7 +9,8 @@ mongoose.connect(mongoUrl, (err) => {
     console.log(err)
 });
 
-const homeRoute = require('./routes/home/get');
+const homeGetRoute = require('./routes/home/get');
+const topicGetRoute = require('./routes/topics/get')
 const composeGet = require('./routes/blog/get');
 const composePost = require('./routes/blog/post');
 
@@ -20,9 +21,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
-app.use('/', homeRoute);
-app.use('/compose', composeGet)
-app.use('/compose', composePost)
+app.use('/', homeGetRoute);
+app.use('/topics', topicGetRoute);
+app.use('/compose', composeGet);
+app.use('/compose', composePost);
+
+app.use(function (req, res, next) {
+      res.status(404).render("screens/404")
+    })
 
 app.listen(PORT, () => {
     console.log('SERVER STARTED\nPORT : '+ PORT);

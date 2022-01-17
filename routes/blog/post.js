@@ -3,17 +3,15 @@ var route = express.Router();
 var mongoUrl = 'mongodb+srv://ayush:ayush123@clusterone.9nyzv.mongodb.net/myDB';
 
 const mongoose = require('mongoose');
-
-// mongoose.connect(mongoUrl, (e, err) => {
-//     console.log('failed to connect'+ e + err);
-// })
-
 const Blog = require('../../models/blog');
 
 route.post('/', (req, res) => {
     var blogTitle = req.body.blogTitle;
     var blogSubTitle = req.body.blogSubTitle;
     var blogDescription = req.body.blogText;
+    var blogTopic = req.body.blogTopic;
+
+    console.log(blogTopic);
 
     var newBlog = new Blog(
         {
@@ -29,6 +27,7 @@ route.post('/', (req, res) => {
                 url : 'images/2.jpg',
             }
         ],
+        topic : blogTopic
     }
     )
 

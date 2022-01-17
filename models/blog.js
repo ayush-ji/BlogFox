@@ -58,9 +58,10 @@ var BlogSchema = new Schema({
         type : [ImageSchema],
     },
     publishDate : {
-        //required: true,
-        type : DateTime,
+        type : Number,
+        default : Date.now()
     },
+    topic : String,
     likes : Number,
     comment : [CommentSchema]
 });
