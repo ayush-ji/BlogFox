@@ -1,0 +1,27 @@
+<div id="photo-carousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+        <% for( let index = 0 ; index < imageUrl.length; index++ ) { %>
+            <button type="button" data-bs-target="#photo-carousel" data-bs-slide-to="<%= index %>"></button>
+            <% } %>
+    </div>
+
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+        <% for ( let i = 0; i < imageUrl.length ; i++ ) { %>
+            <div class="carousel-item active">
+                <img src="<%= imageUrl[i].url %> " alt="<%= imageUrl[i].altText %> " height="500px" style="object-fit:cover" class="d-block w-100">
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#photo-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#photo-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>

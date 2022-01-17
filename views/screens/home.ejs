@@ -1,12 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hello
-</body>
-</html>
+<%- include('../layouts/header') %>
+<%- include('../components/navbar') %> 
+
+  <%- include('../components/carousel', {imageUrl : [{url : 'images/1.jpg' ,altText : '1 image' }]})%>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <h1>Latest From Me!</h1> -->
+        <div id="new-blog-holder" class="col-md-9 gap-5">
+
+          <% for( let i=0; i < cardDataArr.length; i++ ) { %>
+            <%- include('../components/card', { cardData : cardDataArr[i] }) %>
+              <% } %>
+
+        </div>
+        <div class="col-sm-3">
+          <div style="background-color: burlywood; " class="container-fluid">
+            <div id="fav-cont" class="container">
+              <div class="fav-item">
+                <img width="150px" height="150px" src="/1.jpg" alt="">
+                <p>hello this is new article</p>
+              </div>
+              <div class="fav-item">
+                <img width="150px" height="150px" src="/1.jpg" alt="">
+                <p>hello this is new article</p>
+              </div>
+              <div class="fav-item">
+                <img width="150px" height="150px" src="/1.jpg" alt="">
+                <p>hello this is new article</p>
+              </div>
+              <div class="fav-item">
+                <img width="150px" height="150px" src="/1.jpg" alt="">
+                <p>hello this is new article</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+
+    <%- include('../layouts/footer') %>

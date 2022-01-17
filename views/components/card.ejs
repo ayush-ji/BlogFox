@@ -1,8 +1,8 @@
 <div class="card" style="width:400px">
-    <img class="card-img-top" src="<%= imageSrc %> " alt="Card Image">
+    <img class="card-img-top" src="<%=  cardData.imageSrc %> " alt="Card Image">
     <div class="card-body">
-        <h4 class="card-title"><%= cardTitle %> </h4>
-        <p class="card-text"><%= cardText %> </p>
-        <a href="<%= cardLink %> " class="btn btn-primary">Read More</a>
+        <h4 class="card-title"><%= cardData.cardTitle %> </h4>
+        <p class="card-text"><%= cardData.cardText %> </p>
+        <a href="<%= cardData.cardLink %> " class="btn btn-primary">Read More</a>
     </div>
 </div>
