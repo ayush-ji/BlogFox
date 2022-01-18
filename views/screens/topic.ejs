@@ -1,10 +1,12 @@
 
-<%- include('../layouts/header') %>
+<%- include('../layouts/header',  {cssHref : ''}) %>
 <%- include('../components/navbar') %> 
-
-  <%- include('../components/carousel', {imageUrl : [{url : 'images/1.jpg' ,altText : '1 image' }]})%>
-
     <h1><%= topic %> </h1>
+    <div class="container-fluid bg-success gap-3">
+      <% for( let i = 0; i < allBlogs.length; i++ ) { %>
+        <div class="container bg-warning"><%= allBlogs[i] %> </div>
+      <% } %>
+    </div>
 
       <script src="script.js"></script>
 

@@ -10,7 +10,9 @@ mongoose.connect(mongoUrl, (err) => {
 });
 
 const homeGetRoute = require('./routes/home/get');
-const topicGetRoute = require('./routes/topics/get')
+const topicGetRoute = require('./routes/topics/get');
+const aboutGetRoute = require('./routes/about/get');
+const aboutPostRoute = require('./routes/about/post');
 const composeGet = require('./routes/blog/get');
 const composePost = require('./routes/blog/post');
 
@@ -23,6 +25,8 @@ app.use(express.static('public'));
 
 app.use('/', homeGetRoute);
 app.use('/topics', topicGetRoute);
+app.use('/about', aboutGetRoute);
+app.use('/about', aboutPostRoute);
 app.use('/compose', composeGet);
 app.use('/compose', composePost);
 
