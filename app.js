@@ -35,5 +35,5 @@ app.use(function (req, res, next) {
     })
 
 app.listen(PORT, () => {
-    console.log('SERVER STARTED\nPORT : '+ PORT);
+    console.log('server started!\nPORT : '+ PORT);
 });
