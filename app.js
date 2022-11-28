@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 var PORT = process.env.PORT || 3000;
-var mongoUrl = 'mongodb+srv://ayush:ayush123@clusterone.9nyzv.mongodb.net/myDB';
+var mongoUrl = 'mongodb+srv://ayush:<password>@clusterone.9nyzv.mongodb.net/myDB'; //add password here
 
 var mongoose = require('mongoose');
 
